@@ -22,10 +22,12 @@ const crearEstrucHtml = () => {
      
       </ol>
     `;
-    
+ 
+
+
     
     divChistes.innerHTML = html;
-    body.append( divChistes);
+    body.append( divChistes );
 }
 
 //eventos
@@ -37,16 +39,14 @@ const eventos = () => {
     btnOtro.addEventListener('click',async () => {
           
         btnOtro.disabled = true;
-
         dibujarChiste(await obtenerChiste());
-    
         btnOtro.disabled = false;
 
     })
 }
 
 const dibujarChiste = ( chiste )  => {
-   num++;
+    num++;
     const olItem = document.createElement('li');
     olItem.innerHTML = `${num}<br> ${ chiste.id }: </br> ${ chiste.value }`;
     olItem.classList.add('list-group-item');
@@ -61,4 +61,5 @@ const dibujarChiste = ( chiste )  => {
 export const init = () => {
   crearEstrucHtml();
   eventos();
+ 
 }

@@ -1,7 +1,7 @@
 //LOGICA PARA PETICIONES
 
 
-const jokeUrl = 'https://api.chucknorris.io/jokes/random';
+const jokeUrl     = 'https://api.chucknorris.io/jokes/random';
 
 
  const obtenerChiste = async () => { 
@@ -22,6 +22,15 @@ const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
 }
 
+const obtenerUsuarios = async () => {
+  
+const resp = await fetch( urlUsuarios );
+const { data : usuarios } = await resp.json();
+
+
+return usuarios;
+
+}
 
 
 
@@ -31,7 +40,7 @@ const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
 
 export {
-
+   obtenerUsuarios,
     obtenerChiste
 }
 
