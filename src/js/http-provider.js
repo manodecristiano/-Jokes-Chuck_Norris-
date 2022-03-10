@@ -1,10 +1,10 @@
 //LOGICA PARA PETICIONES
 
 
-const jokeUrl = 'https://api.chucknorris.io/jokes/random5';
+const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
 
-const obtenerChiste = async () => { 
+ const obtenerChiste = async () => { 
 
  try {
     const resp = await fetch( jokeUrl );
